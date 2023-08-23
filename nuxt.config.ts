@@ -19,6 +19,13 @@ export default defineNuxtConfig({
           base: 'default'
         }
       }
+    } : {
+      '/**': {
+        swr: 60,
+        cache: {
+          base: 'default'
+        }
+      }
     }
   },
 })
