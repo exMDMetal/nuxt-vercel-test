@@ -1,4 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+const isProduction = process.env.NODE_ENV === 'production'
 export default defineNuxtConfig({
-  devtools: { enabled: true }
+  devtools: { enabled: !isProduction },
+  nitro: {
+    preset: 'vercel-edge'
+  }
 })
