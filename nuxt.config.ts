@@ -12,20 +12,20 @@ export default defineNuxtConfig({
         base: '/tmp/nitro'
       }
     },
-    // routeRules: isProduction ? {
-    //   '/**': {
-    //     swr: 60,
-    //     cache: {
-    //       base: 'default'
-    //     }
-    //   }
-    // } : {
-    //   '/**': {
-    //     swr: 60,
-    //     cache: {
-    //       base: 'default'
-    //     }
-    //   }
-    // }
+    routeRules: isProduction ? {
+      '/**': {
+        swr: 60,
+        // cache: {
+        //   base: 'default'
+        // }
+      }
+    } : {
+      '/**': {
+        swr: 60,
+        // cache: {
+        //   base: 'default'
+        // }
+      }
+    }
   },
 })
