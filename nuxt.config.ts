@@ -11,6 +11,14 @@ export default defineNuxtConfig({
         driver: 'fs',
         base: '/tmp/nitro'
       }
+    },
+    routeRules: isProduction ? {
+      '/**': {
+        swr: 60,
+        cache: {
+          base: 'default'
+        }
+      }
     }
   },
 })
