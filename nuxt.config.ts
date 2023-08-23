@@ -3,7 +3,7 @@ const isProduction = process.env.NODE_ENV === 'production'
 export default defineNuxtConfig({
   devtools: { enabled: !isProduction },
   nitro: {
-    preset: 'vercel',
+    preset: 'vercel-edge',
     storage: {
       default: isProduction ? {
         driver: 'vercelKV'
