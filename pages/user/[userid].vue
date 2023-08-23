@@ -15,6 +15,7 @@ if (!currentUser) {
 </script>
 
 <template>
+    <NuxtLink to="/user">Back to users list</NuxtLink>
     <div v-if="currentUser">
         <h1>User</h1>
         <p>{{ currentUser.name }}</p>

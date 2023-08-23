@@ -1,18 +1,11 @@
-<script setup lang="ts">
-const { getAllUsers, users } = useUser()
-
-await getAllUsers()
-</script>
-
 <template>
-    <div>
-        <h1>Users</h1>
-        <ul>
-        <li v-for="user in users" :key="user.id">
-            <NuxtLink :to="`/${user.id}`">
-                {{ user.name }}
-            </NuxtLink>
+    <h1>Home</h1>
+    <ul>
+        <li>
+            <NuxtLink to="/user">Users list</NuxtLink>
         </li>
-        </ul>
-    </div>
+        <li>
+            <NuxtLink to="/todolist">Todo list</NuxtLink>
+        </li>
+    </ul>
 </template>
