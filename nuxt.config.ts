@@ -13,8 +13,7 @@ export default defineNuxtConfig({
       }
     },
     routeRules: isProduction ? {
-      // '/': { swr: 60 },
-      // '/user/**': { swr: 60 }
+      '/user/**': { swr: 600 },
     } : {
       '/**': {
         swr: 60,
