@@ -13,19 +13,14 @@ export default defineNuxtConfig({
       }
     },
     routeRules: isProduction ? {
+      '/user/**': { swr: 600 },
+    } : {
       '/**': {
         swr: 60,
-        // cache: {
-        //   base: 'default'
-        // }
+        cache: {
+          base: 'default'
+        }
       }
-    } : {
-      // '/**': {
-      //   swr: 60,
-      //   cache: {
-      //     base: 'default'
-      //   }
-      // }
     }
   },
 })
