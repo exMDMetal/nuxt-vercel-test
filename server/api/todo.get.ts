@@ -1,5 +1,7 @@
 import type { Todo } from '~/types/todo'
 
 export default defineEventHandler(async (event) => {
-    return await useStorage('default').getItem<Todo[]>('todos') || []
+    const { getItem } = useStorage('default')
+
+    return await getItem<Todo[]>('todos') || []
 })
