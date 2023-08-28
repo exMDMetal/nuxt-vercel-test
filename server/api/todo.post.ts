@@ -3,6 +3,7 @@ export default defineEventHandler(async (event) => {
         const body = await readBody(event)
         await useStorage('default').setItem('todos', body)
         
+        
         return { ok: true }
     } catch (error) {
         return { ok: false, error }
